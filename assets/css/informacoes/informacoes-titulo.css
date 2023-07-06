@@ -1,0 +1,5 @@
+.informacoes__titulo {
+    font-weight: 700;
+    color: var(--fundo-secundario);
+    line-height: 1;
+}

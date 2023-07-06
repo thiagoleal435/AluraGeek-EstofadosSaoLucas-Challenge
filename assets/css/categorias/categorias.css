@@ -1,0 +1,25 @@
+.categorias {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.categorias__top,
+.categorias__bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 50%;
+    margin-bottom: 5%;
+}
+
+.categorias__sofa,
+.categorias__poltrona,
+.categorias__cabeceira,
+.categorias__painel {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    width: 47.5%;
+    height: 40vw;
+}

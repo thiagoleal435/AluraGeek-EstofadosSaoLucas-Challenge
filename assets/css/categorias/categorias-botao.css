@@ -1,0 +1,8 @@
+.categorias__botao {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    margin: 0 auto;
+    background-color: var(--fundo-secundario);
+    color: white;
+}

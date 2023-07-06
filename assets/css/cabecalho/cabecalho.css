@@ -1,0 +1,6 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+    background-color: var(--fundo-primario);
+}

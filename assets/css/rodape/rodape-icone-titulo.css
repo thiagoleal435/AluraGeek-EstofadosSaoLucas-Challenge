@@ -1,0 +1,16 @@
+.rodape__icone__titulo {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+    gap: .5rem;
+}
+
+.rodape__icone {
+    font-size: 3rem;
+    color: var(--fundo-secundario);
+}
+
+.rodape__titulo {
+    font-size: 1.5rem;
+    line-height: 1;
+}

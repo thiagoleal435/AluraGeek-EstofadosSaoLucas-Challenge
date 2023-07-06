@@ -1,0 +1,55 @@
+:root {
+    --fundo-primario: #f0e8e8;
+    --fundo-secundario: #ce2c2c;
+
+    --preto-forte: #0e0e0e;
+    --preto-fraco: #1b1919;
+
+    --sombra-titulo: 1px 0px 0px rgba(222, 21, 21, 0.5);
+}
+
+body {
+    background-color: var(--fundo-primario);
+    font-family: 'Work Sans', sans-serif;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-link);
+}
+
+strong {
+    color: var(--fundo-secundario);
+}
+
+nav {
+    display: flex;
+}
+
+.tudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 5%;
+}
+
+.botao {
+    display: flex;
+    font-size: 1rem;
+    padding: .5rem;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    transform: translateX(0) scale(1);
+    transition: 0.5s;
+}
+
+.botao:hover {
+    cursor: pointer;
+    transform: translateX(2px) scale(1.1);
+}

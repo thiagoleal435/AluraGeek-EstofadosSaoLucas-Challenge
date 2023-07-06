@@ -1,0 +1,8 @@
+.rodape__copyright {
+    background-color: white;
+}
+
+.rodape__copyright__texto {
+    text-align: center;
+    color: var(--preto-fraco);
+}

@@ -1,0 +1,17 @@
+.cabecalho__icones {
+    display: flex;
+}
+
+.cabecalho__icone__search {
+    color: var(--preto-fraco);
+}
+
+.cabecalho__icone__user {
+    color: var(--preto-fraco);
+    margin: 0 .5rem;
+
+}
+
+.cabecalho__icone__cart {
+    color: var(--fundo-secundario);
+}

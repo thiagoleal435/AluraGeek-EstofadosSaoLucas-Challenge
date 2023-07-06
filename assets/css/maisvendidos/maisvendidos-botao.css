@@ -1,0 +1,5 @@
+.maisvendidos__botao {
+    margin-top: 1rem;
+    background-color: var(--fundo-secundario);
+    color: white;
+}

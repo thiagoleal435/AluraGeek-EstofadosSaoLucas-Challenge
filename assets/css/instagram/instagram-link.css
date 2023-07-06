@@ -1,0 +1,8 @@
+.instagram__link {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--fundo-secundario);
+    text-shadow: var(--sombra-titulo);
+}

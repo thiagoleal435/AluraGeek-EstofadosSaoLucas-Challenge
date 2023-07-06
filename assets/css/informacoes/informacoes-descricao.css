@@ -1,0 +1,5 @@
+.informacoes__descricao {
+    color: var(--preto-fraco);
+    padding: .5rem 0;
+    line-height: 1;
+}

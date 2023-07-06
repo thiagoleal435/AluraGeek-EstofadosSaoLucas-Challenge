@@ -1,0 +1,11 @@
+.categorias__titulo {
+    position: absolute;
+    width: 100%;
+    top: 2.5%;
+    text-align: center;
+
+    color: var(--preto-forte);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 0px 0px rgba(222, 21, 21, 0.5);
+}

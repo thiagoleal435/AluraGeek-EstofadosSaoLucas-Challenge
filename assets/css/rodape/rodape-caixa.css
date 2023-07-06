@@ -1,0 +1,24 @@
+.rodape__caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.rodape__endereco,
+.rodape__telefone,
+.rodape__whatsapp,
+.rodape__atendimento {
+    font-size: .8rem;
+    color: var(--preto-fraco);
+    text-align: center;
+    padding: .5rem 0;
+}
+
+.rodape__icone__caixa {
+    font-weight: 700;
+}
+
+.rodape__sac {
+    padding-top: 1.5rem;
+}

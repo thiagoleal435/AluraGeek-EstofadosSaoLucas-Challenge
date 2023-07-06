@@ -1,0 +1,10 @@
+.cabecalho__titulo {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__logo {
+    font-size: 1rem;
+    color: var(--fundo-secundario);
+    margin-right: .5rem;
+}

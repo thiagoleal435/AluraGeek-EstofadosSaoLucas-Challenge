@@ -1,0 +1,9 @@
+.cabecalho__busca {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .cabecalho__input {
+        display: flex;
+    }
+}

@@ -1,0 +1,6 @@
+.personalizado__botao {
+    margin: .5rem 0;
+    background-color: var(--fundo-secundario);
+    color: white;
+    align-self: center;
+}
