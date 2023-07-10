@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Estofados São Lucas | Loja online de estofados e tapeceria</title>
-    <meta name="tema-cor" content="#ce2c2c">
-    <link rel="icon" href="./assets/img/estofados-logo.svg" style="color: brown;">
+    <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap" rel="stylesheet">
@@ -20,11 +19,10 @@
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-titulo.css">
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-busca.css">
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-icones.css">
-
     <link rel="stylesheet" href="./assets/css/banner/banner.css">
-    <link rel="stylesheet" href="./assets/css/banner/banner-img.css">
+    <link rel="stylesheet" href="./assets/css/banner/banner-imagem.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-info.css">
-
+    <link rel="stylesheet" href="./assets/css/banner/banner-botao.css">
     <link rel="stylesheet" href="./assets/css/categorias/categorias.css">
     <link rel="stylesheet" href="./assets/css/categorias/categorias-sofa.css">
     <link rel="stylesheet" href="./assets/css/categorias/categorias-poltrona.css">
@@ -32,34 +30,22 @@
     <link rel="stylesheet" href="./assets/css/categorias/categorias-painel.css">
     <link rel="stylesheet" href="./assets/css/categorias/categorias-titulo.css">
     <link rel="stylesheet" href="./assets/css/categorias/categorias-botao.css">
-
     <link rel="stylesheet" href="./assets/css/informacoes/informacoes.css">
     <link rel="stylesheet" href="./assets/css/informacoes/informacoes-item.css">
     <link rel="stylesheet" href="./assets/css/informacoes/informacoes-icone.css">
     <link rel="stylesheet" href="./assets/css/informacoes/informacoes-titulo.css">
     <link rel="stylesheet" href="./assets/css/informacoes/informacoes-descricao.css">
-
     <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-item.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-img.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-descricao.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-valor.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-desconto.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-valorprazo.css">
-    <link rel="stylesheet" href="./assets/css/maisvendidos/maisvendidos-botao.css">
-
     <link rel="stylesheet" href="./assets/css/personalizado/personalizado.css">
     <link rel="stylesheet" href="./assets/css/personalizado/personalizado-titulo.css">
     <link rel="stylesheet" href="./assets/css/personalizado/personalizado-descricao.css">
     <link rel="stylesheet" href="./assets/css/personalizado/personalizado-botao.css">
     <link rel="stylesheet" href="./assets/css/personalizado/personalizado-img.css">
-
     <link rel="stylesheet" href="./assets/css/instagram/instagram.css">
     <link rel="stylesheet" href="./assets/css/instagram/instagram-titulo.css">
     <link rel="stylesheet" href="./assets/css/instagram/instagram-link.css">
     <link rel="stylesheet" href="./assets/css/instagram/instagram-imagens.css">
     <link rel="stylesheet" href="./assets/css/instagram/instagram-img.css">
-
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
@@ -73,30 +59,36 @@
 <body>
     <header class="cabecalho">
         <div class="cabecalho__titulo">
-            <i class="fa-solid fa-couch cabecalho__logo"></i>
+            <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
         <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input">
-            <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
+            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
+            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
         </div>
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
-            <i class="fa-solid fa-user cabecalho__icone__user"></i>
+            <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
             <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
         </div>
     </header>
 
     <div class="tudo">
         <section class="banner">
-            <div class="banner__img">
-                <div class="banner__info">
-                    <h1 class="banner__titulo">Melhor qualidade<br>e conforto</h1>
-                    <h3 class="banner__descricao">Pix : 5% OFF<br>Cartão : até 12X
-                    </h3>
-                    <botton class="banner__botao botao">Ver produtos</botton>
-                </div>
+            <img src="./assets/img/banner.jpg" alt="Banner numero 1" class="banner__imagem">
+            <img src="./assets/img/instagram-img (1).jpg" alt="Banner numero 2" class="banner__imagem">
+            <img src="./assets/img/instagram-img (3).jpg" alt="Banner numero 3" class="banner__imagem">
+
+            <div class="banner__info">
+                <h1 class="banner__titulo">Melhor qualidade<br>e conforto</h1>
+                <h3 class="banner__descricao">Pix : 5% OFF<br>Cartão : até 12X
+                </h3>
+                <botton class="banner__botao botao">Ver produtos</botton>
             </div>
+
+            <bottom class="banner__botao__back"><i class="fa-solid fa-chevron-left banner__icone"></i></bottom>
+            <bottom class="banner__botao__next"><i class="fa-solid fa-chevron-right banner__icone"></i></bottom>
+
         </section>
 
         <section class="categorias">
@@ -147,46 +139,56 @@
 
         <section class="maisvendidos container">
             <h2 class="maisvendidos__titulo">Mais vendidos</h2>
-            <div class="maisvendidos__item">
-                <img src="./assets/img/categorias-sofa.jpg" alt="Sofá retrátil e reclinável" class="maisvendidos__img">
-                <p class="maisvendidos__descricao">Sofá retrátil e reclinável 250cm veludo</p>
-                <h3 class="maisvendidos__valor">R$ 2.754,99</h3>
-                <p class="maisvendidos__desconto">5% de desconto à vista ou em 1x no cartão</p>
-                <h3 class="maisvendidos__valorprazo">Ou em 10x de R$ 290,00 no cartão de crédito</h3>
-                <botton class="maisvendidos__botao botao">Ver detalhes</botton>
+            <div class="caixa__produto">
+                <img src="./assets/img/categorias-sofa.jpg" alt="Sofá retrátil e reclinável" class="produto__img">
+                <p class="produto__descricao">Sofá retrátil e reclinável 250cm veludo</p>
+                <h3 class="produto__valor">R$ 2.754,99</h3>
+                <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
+                <h3 class="produto__valorprazo">Ou em 10x de R$ 290,00 no cartão de crédito</h3>
+                <a class="botao" href="ver-detalhes.html">
+                    <botton class="produto__botao">Ver detalhes</botton>
+                </a>
             </div>
-            <div class="maisvendidos__item">
-                <img src="./assets/img/categorias-poltrona.jpg" alt="Poltrona capitone" class="maisvendidos__img">
-                <p class="maisvendidos__descricao">Poltrona capitone 100cm linho</p>
-                <h3 class="maisvendidos__valor">R$ 854,99</h3>
-                <p class="maisvendidos__desconto">5% de desconto à vista ou em 1x no cartão</p>
-                <h3 class="maisvendidos__valorprazo">Ou em 10x de R$ 90,00 no cartão de crédito</h3>
-                <botton class="maisvendidos__botao botao">Ver detalhes</botton>
+            <div class="caixa__produto">
+                <img src="./assets/img/categorias-poltrona.jpg" alt="Poltrona capitone" class="produto__img">
+                <p class="produto__descricao">Poltrona capitone 100cm linho</p>
+                <h3 class="produto__valor">R$ 854,99</h3>
+                <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
+                <h3 class="produto__valorprazo">Ou em 10x de R$ 90,00 no cartão de crédito</h3>
+                <a class="botao" href="ver-detalhes.html">
+                    <botton class="produto__botao">Ver detalhes</botton>
+                </a>
             </div>
-            <div class="maisvendidos__item">
-                <img src="./assets/img/categorias-cabeceira.jpg" alt="Cabeceira de casal" class="maisvendidos__img">
-                <p class="maisvendidos__descricao">Cabeceira de casal capitone facto - 150cm largura - 120cm altura</p>
-                <h3 class="maisvendidos__valor">R$ 569,99</h3>
-                <p class="maisvendidos__desconto">5% de desconto à vista ou em 1x no cartão</p>
-                <h3 class="maisvendidos__valorprazo">Ou em 10x de R$ 60,00 no cartão de crédito</h3>
-                <botton class="maisvendidos__botao botao">Ver detalhes</botton>
+            <div class="caixa__produto">
+                <img src="./assets/img/categorias-cabeceira.jpg" alt="Cabeceira de casal" class="produto__img">
+                <p class="produto__descricao">Cabeceira de casal capitone facto - 150cm largura - 120cm altura</p>
+                <h3 class="produto__valor">R$ 569,99</h3>
+                <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
+                <h3 class="produto__valorprazo">Ou em 10x de R$ 60,00 no cartão de crédito</h3>
+                <a class="botao" href="ver-detalhes.html">
+                    <botton class="produto__botao">Ver detalhes</botton>
+                </a>
             </div>
-            <div class="maisvendidos__item">
-                <img src="./assets/img/categorias-painel.jpg" alt="Painel" class="maisvendidos__img">
-                <p class="maisvendidos__descricao">Painel full em trapézios facto - 200cm largura - 300cm altura</p>
-                <h3 class="maisvendidos__valor">R$ 104,49</h3>
-                <p class="maisvendidos__desconto">5% de desconto à vista ou em 1x no cartão</p>
-                <h3 class="maisvendidos__valorprazo">Ou em 10x de R$ 110,00 no cartão de crédito</h3>
-                <botton class="maisvendidos__botao botao">Ver detalhes</botton>
+            <div class="caixa__produto">
+                <img src="./assets/img/categorias-painel.jpg" alt="Painel" class="produto__img">
+                <p class="produto__descricao">Painel full em trapézios facto - 200cm largura - 300cm altura</p>
+                <h3 class="produto__valor">R$ 1045,49</h3>
+                <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
+                <h3 class="produto__valorprazo">Ou em 10x de R$ 110,00 no cartão de crédito</h3>
+                <a class="botao" href="ver-detalhes.html">
+                    <botton class="produto__botao">Ver detalhes</botton>
+                </a>
             </div>
         </section>
 
         <section class="personalizado container">
-            <h2 class="personalizado__titulo">Quer por a sua ideia em prática?</h2>
-            <p class="personalizado__descricao">Se você precisa de um estofado personalizado, com medidas e design
-                espécifico, fale com o nosso consultor e expresse a sua idéia para que possamos materializa-la
-                juntos!</p>
-            <botton class="personalizado__botao botao" value="botao-consultor">Falar com Consultor</botton>
+            <div class="personalizado__info">
+                <h2 class="personalizado__titulo">Quer por a sua ideia em prática?</h2>
+                <p class="personalizado__descricao">Se você precisa de um estofado personalizado, com medidas e design
+                    espécifico, fale com o nosso consultor e expresse a sua idéia para que possamos materializa-la
+                    juntos!</p>
+                <botton class="personalizado__botao botao" value="botao-consultor">Falar com Consultor</botton>
+            </div>
             <img src="./assets/img/personalizado-img.jpg" alt="Sofá Personalizado" class="personalizado__img">
         </section>
 
@@ -222,28 +224,65 @@
                 18h - Sábado das 8h às 12h</p>
             <p class="rodape__sac">sac@estofadossl.com.br</p>
         </div>
-        <div class="rodape__produtos">
-            <h3 class="rodape__titulo">Nossos Produtos</h3>
-            <p class="rodape__descricao">Todos os produtos disponíveis</p>
-        </div>
-        <div class="rodape__contato">
-            <h3 class="rodape__titulo">Fale conosco</h3>
-            <div class="rodape__dados__input">
-                <input type="text" class="rodape__input" id="input-nome" name="nome" required>
-                <label for="nome" class="rodape__label">Nome</label>
+        <div class="rodape__produtos__contatos">
+            <div class="rodape__produtos">
+                <h3 class="rodape__titulo">Nossos Produtos</h3>
+                <a href="#">
+                    <p class="rodape__descricao">Todos os produtos disponíveis</p>
+                </a>
             </div>
-            <div class="rodape__dados__input rodape__dados__input--textarea">
-                <textarea class="rodape__input rodape__input--textarea" id="textarea-mensagem" name="mensagem"
-                    maxlength="200" required></textarea>
-                <label for="mensagem" class="rodape__label rodape__label--textarea">Escreva sua Mensagem</label>
+            <div class="rodape__contato">
+                <h3 class="rodape__titulo">Fale conosco</h3>
+                <div class="caixa__input">
+                    <input type="text" class="input" id="input-nome" name="nome" required>
+                    <label for="nome" class="label">Nome</label>
+                </div>
+                <div class="caixa__input caixa__input--textarea">
+                    <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
+                        required></textarea>
+                    <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
+                </div>
+                <botton class="rodape__botao botao">Enviar Mensagem</botton>
             </div>
-            <botton class="rodape__botao botao">Enviar Mensagem</botton>
+
         </div>
         <div class="rodape__copyright">
             <h3 class="rodape__copyright__texto">Estofados <strong>São Lucas</strong></h3>
             <h3 class="rodape__copyright__texto">Desenvolvido por Thiago Leal - 2023</h3>
         </div>
     </footer>
+
+    <script>
+        var imagens = document.getElementsByClassName("banner__imagem");
+        var backBtn = document.getElementsByClassName("banner__botao__back")[0];
+        var nextBtn = document.getElementsByClassName("banner__botao__next")[0];
+        var indiceAtual = 0;
+
+        mostrarImagem(indiceAtual);
+
+        backBtn.addEventListener("click", function () {
+            indiceAtual--;
+            if (indiceAtual < 0) {
+                indiceAtual = imagens.length - 1;
+            }
+            mostrarImagem(indiceAtual);
+        });
+
+        nextBtn.addEventListener("click", function () {
+            indiceAtual++;
+            if (indiceAtual >= imagens.length) {
+                indiceAtual = 0;
+            }
+            mostrarImagem(indiceAtual);
+        });
+
+        function mostrarImagem(indice) {
+            for (var i = 0; i < imagens.length; i++) {
+                imagens[i].classList.remove("active");
+            }
+            imagens[indice].classList.add("active");
+        }
+    </script>
 
 </body>
 

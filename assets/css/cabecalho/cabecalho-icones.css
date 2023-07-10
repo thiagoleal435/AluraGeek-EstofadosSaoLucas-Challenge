@@ -1,5 +1,6 @@
 .cabecalho__icones {
     display: flex;
+    align-items: center;
 }
 
 .cabecalho__icone__search {
@@ -14,4 +15,13 @@
 
 .cabecalho__icone__cart {
     color: var(--fundo-secundario);
+}
+
+@media screen and (min-width:1024px) {
+
+    .cabecalho__icone__cart,
+    .cabecalho__icone__search,
+    .cabecalho__icone__user {
+        font-size: 1.2rem;
+    }
 }

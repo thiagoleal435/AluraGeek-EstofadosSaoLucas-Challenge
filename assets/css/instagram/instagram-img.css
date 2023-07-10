@@ -3,3 +3,10 @@
     margin-bottom: 1rem;
     border-radius: 20%;
 }
+
+@media screen and (min-width:1024px) {
+    .instagram__img {
+        width: 15%;
+        margin: 1rem 0;
+    }
+}

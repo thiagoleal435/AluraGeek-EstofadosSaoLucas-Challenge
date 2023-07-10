@@ -1,6 +1,10 @@
 .personalizado__botao {
-    margin: .5rem 0;
-    background-color: var(--fundo-secundario);
-    color: white;
+    margin: 1rem 0;
     align-self: center;
+}
+
+@media screen and (min-width:768px) {
+    .personalizado__botao {
+        align-self: flex-start;
+    }
 }

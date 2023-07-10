@@ -13,3 +13,38 @@
     color: var(--preto-fraco);
     line-height: normal;
 }
+
+@media screen and (min-width:768px) {
+    .rodape__produtos__contatos {
+        width: 55%;
+        margin-right: 5%;
+    }
+
+    .rodape__produtos {
+        width: 100%;
+        padding: 0.5rem 0;
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .rodape__produtos__contatos {
+        width: 60%;
+        margin-right: 2.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rodape__produtos {
+        width: 40%;
+        margin-right: 15%;
+        padding-top: 0;
+        border: none;
+        align-items: start;
+    }
+
+    .rodape__descricao {
+        font-size: 1rem;
+        margin-top: .5rem;
+    }
+}

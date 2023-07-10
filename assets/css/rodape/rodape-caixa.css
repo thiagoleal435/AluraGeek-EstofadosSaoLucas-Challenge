@@ -22,3 +22,20 @@
 .rodape__sac {
     padding-top: 1.5rem;
 }
+
+@media screen and (min-width:768px) {
+    .rodape__caixa {
+        width: 35%;
+        padding: 0 2.5%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .rodape__caixa {
+        width: 25%;
+        padding-left: 2%;
+        align-items: flex-start;
+    }
+
+}

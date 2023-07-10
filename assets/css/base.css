@@ -12,11 +12,12 @@ body {
     background-color: var(--fundo-primario);
     font-family: 'Work Sans', sans-serif;
     line-height: normal;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: var(--cor-link);
+    line-height: 0;
 }
 
 strong {
@@ -36,15 +37,121 @@ nav {
     margin: 0 5%;
 }
 
-.botao {
+/* Div produtos */
+
+.caixa__produto {
+    display: grid;
+    padding: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.produto__img {
+    width: 100%;
+    height: 300px;
+    border-radius: inherit;
+}
+
+.produto__descricao {
+    margin: .5rem 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.produto__valor {
+    font-size: 1.2rem;
+    color: var(--preto-fraco);
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.produto__desconto {
+    color: var(--fundo-secundario);
+}
+
+.produto__valorprazo {
+    font-size: 1.2rem;
+    color: var(--preto-forte);
+    margin-bottom: .5rem;
+}
+
+.produto__botao {
+    padding: 1rem;
+}
+
+/* Div input e label */
+
+.caixa__input {
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
+    margin: .5rem 0;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    padding: 6% 2.5% 3% 2.5%;
     font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    border: none;
+    border-radius: 2px;
+}
+
+.input:hover,
+.input:valid,
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--fundo-secundario);
+}
+
+.label {
+    color: var(--preto-fraco);
+    font-weight: 300;
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.input:hover+.label,
+.input:valid+.label,
+.input:focus-within+.label {
+    top: 5%;
+    font-size: .8rem;
+    color: var(--fundo-secundario);
+}
+
+.caixa__input--textarea {
+    display: flex;
+    height: 15vh;
+}
+
+.input--textarea {
+    resize: none;
+    box-sizing: border-box;
+}
+
+.label--textarea {
+    top: 15%;
+}
+
+/* bottons */
+
+.botao {
+    background-color: var(--fundo-secundario);
+    color: white;
+    display: flex;
+    justify-content: center;
     padding: .5rem;
     box-sizing: border-box;
     outline: none;
     border: none;
     border-radius: 5px;
-    color: black;
     transform: translateX(0) scale(1);
     transition: 0.5s;
 }
@@ -52,4 +159,26 @@ nav {
 .botao:hover {
     cursor: pointer;
     transform: translateX(2px) scale(1.1);
+}
+
+@media screen and (min-width:768px) {
+    .caixa__produto {
+        width: 42.5%;
+        padding: 2.5%;
+    }
+
+    .botao {
+        font-size: 1.25rem;
+    }
+
+    .input {
+        padding: 5% 2% 2% 2%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .caixa__produto {
+        width: 20%;
+        padding: 1.5%;
+    }
 }

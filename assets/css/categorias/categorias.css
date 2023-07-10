@@ -23,3 +23,25 @@
     width: 47.5%;
     height: 40vw;
 }
+
+@media screen and (min-width:1024px) {
+
+    .categorias {
+        margin: 0;
+    }
+
+    .categorias__top,
+    .categorias__bottom {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .categorias__sofa,
+    .categorias__poltrona,
+    .categorias__cabeceira,
+    .categorias__painel {
+        width: 100%;
+        height: 30vw;
+        margin: 2.5%;
+    }
+}

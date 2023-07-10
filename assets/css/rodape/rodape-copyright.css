@@ -1,8 +1,16 @@
 .rodape__copyright {
     background-color: white;
+    padding: 2rem 0;
 }
 
 .rodape__copyright__texto {
     text-align: center;
     color: var(--preto-fraco);
+}
+
+@media screen and (min-width:768px) {
+    .rodape__copyright {
+        width: 100%;
+        margin-top: 2rem;
+    }
 }

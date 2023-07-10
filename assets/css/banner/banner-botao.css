@@ -1,0 +1,32 @@
+.banner__botao {
+    margin: .5rem 0;
+    align-self: flex-end;
+    background-color: var(--preto-fraco);
+    color: var(--fundo-secundario);
+}
+
+.banner__botao__back,
+.banner__botao__next {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    color: var(--fundo-secundario);
+    font-size: 3rem;
+    transform: translateX(0) scale(1);
+    transition: 0.5s;
+}
+
+.banner__botao__back:hover,
+.banner__botao__next:hover {
+    cursor: pointer;
+    transform: translateX(2px) scale(1.1);
+}
+
+.banner__botao__back {
+    left: 1.5rem;
+}
+
+.banner__botao__next {
+    right: 1.5rem;
+}

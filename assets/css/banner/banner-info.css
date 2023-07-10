@@ -13,7 +13,7 @@
     font-style: italic;
     text-align: center;
     padding: .5rem 0;
-    text-shadow: -0px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--sombra-titulo)
 }
 
 .banner__descricao {
@@ -22,9 +22,28 @@
     color: white;
 }
 
-.banner__botao {
-    margin: .5rem 0;
-    align-self: flex-end;
-    background-color: var(--preto-fraco);
-    color: var(--fundo-secundario);
+@media screen and (min-width:768px) {
+    .banner__titulo {
+        font-size: 1.75rem;
+    }
+
+    .banner__descricao,
+    .banner__botao {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .banner__info {
+        padding: 2rem;
+    }
+
+    .banner__titulo {
+        font-size: 2rem;
+    }
+
+    .banner__descricao,
+    .banner__botao {
+        font-size: 1.5rem;
+    }
 }

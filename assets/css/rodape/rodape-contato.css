@@ -6,67 +6,20 @@
     margin: auto;
 }
 
-.rodape__dados__input {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: .5rem 0;
-    border-radius: 2px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
-}
-
-.rodape__dados__input--textarea {
-    display: flex;
-    height: 5rem;
-}
-
-.rodape__input {
-    display: flex;
-    width: 100%;
-    padding: 6% 2.5% 3% 2.5%;
-    font-size: 1rem;
-    font-family: 'Work Sans', sans-serif;
-    border: none;
-    border-radius: 2px;
-}
-
-.rodape__input--textarea {
-    resize: none;
-    box-sizing: border-box;
-}
-
-.rodape__label {
-    color: var(--preto-fraco);
-    font-weight: 300;
-    position: absolute;
-    top: 25%;
-    left: 2%;
-    pointer-events: none;
-    transition: 0.2s ease all;
-}
-
-.rodape__label--textarea {
-    top: 15%;
-}
-
-.rodape__input:hover,
-.rodape__input:valid,
-.rodape__input:focus {
-    outline: none;
-    border-bottom: 2px solid var(--fundo-secundario);
-}
-
-.rodape__input:hover+.rodape__label,
-.rodape__input:valid+.rodape__label,
-.rodape__input:focus-within+.rodape__label {
-    top: 2.5%;
-    font-size: .8rem;
-    color: var(--fundo-secundario);
-}
-
 .rodape__botao {
-    color: white;
-    background-color: var(--fundo-secundario);
     align-self: flex-start;
     margin-top: .5rem;
+}
+
+@media screen and (min-width:768px) {
+    .rodape__contato {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .rodape__contato {
+        padding-top: 0;
+    }
 }

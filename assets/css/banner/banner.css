@@ -1,3 +1,18 @@
 .banner {
     position: relative;
+    width: 100%;
+    height: calc(70vh - 51px);
+    overflow: hidden;
+}
+
+@media screen and (min-width:768px) {
+    .banner {
+        height: calc(90vh - 72px);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .banner {
+        height: calc(100vh - 93px);
+    }
 }

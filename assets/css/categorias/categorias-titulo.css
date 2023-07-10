@@ -6,6 +6,13 @@
 
     color: var(--preto-forte);
     text-transform: uppercase;
+    font-style: italic;
     font-weight: 700;
     text-shadow: 1px 0px 0px rgba(222, 21, 21, 0.5);
+}
+
+@media screen and (min-width:768px) {
+    .categorias__titulo {
+        font-size: 1.5rem;
+    }
 }

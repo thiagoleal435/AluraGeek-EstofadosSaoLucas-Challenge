@@ -4,7 +4,14 @@
 }
 
 .cabecalho__logo {
-    font-size: 1rem;
     color: var(--fundo-secundario);
     margin-right: .5rem;
+}
+
+@media screen and (min-width:1024px) {
+
+    .cabecalho__titulo,
+    .cabecalho__logo {
+        font-size: 1.2rem;
+    }
 }

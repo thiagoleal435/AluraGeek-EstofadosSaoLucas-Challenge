@@ -1,0 +1,11 @@
+.login__titulo {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+    .login__titulo {
+        font-size: 1.5rem;
+    }
+}

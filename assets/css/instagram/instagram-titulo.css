@@ -4,3 +4,9 @@
     text-shadow: var(--sombra-titulo);
     text-align: center;
 }
+
+@media screen and (min-width:768px) {
+    .instagram__titulo {
+        font-size: 2rem;
+    }
+}

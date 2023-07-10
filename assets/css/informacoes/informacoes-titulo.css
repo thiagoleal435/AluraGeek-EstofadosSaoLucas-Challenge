@@ -3,3 +3,9 @@
     color: var(--fundo-secundario);
     line-height: 1;
 }
+
+@media screen and (min-width:1024px) {
+    .informacoes__titulo {
+        font-size: 1.2rem;
+    }
+}

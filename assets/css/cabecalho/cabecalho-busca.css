@@ -1,9 +1,44 @@
 .cabecalho__busca {
     display: none;
+    position: relative;
+    width: 45%;
+    margin-right: 15%;
+}
+
+.cabecalho__input {
+    display: flex;
+    width: 100%;
+    padding: 2.5%;
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+}
+
+.cabecalho__input::placeholder {
+    font-weight: 300;
+}
+
+.cabecalho__input__icone {
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 3%;
+    top: 30%;
 }
 
 @media screen and (min-width:768px) {
-    .cabecalho__input {
+    .cabecalho__icone__search {
+        display: none;
+    }
+
+    .cabecalho__busca {
         display: flex;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .cabecalho__input {
+        padding: 2%;
     }
 }

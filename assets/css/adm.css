@@ -1,0 +1,72 @@
+/* Login ADM */
+
+.cabecalho__icone__user {
+    display: none;
+}
+
+.cabecalho__icone__cart {
+    display: none;
+}
+
+.adm {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2.5%;
+}
+
+.adm__titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+@media screen and (min-width:768px) {
+    .adm__titulo {
+        margin: 0;
+    }
+}
+
+/* Adicionar produto ADM */
+
+.adm__add {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: white;
+}
+
+.adm__add__imagem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    margin-top: 1rem;
+}
+
+.adm__add__icone {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.adm__img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5%;
+    color: rgba(0, 0, 0, 0.5);
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+}
+
+.adm__add__botao {
+    text-align: center;
+    margin: .5rem 0;
+}
+
+@media screen and (min-width:768px) {
+    .adm__add {
+        padding: 5% 30%;
+    }
+}

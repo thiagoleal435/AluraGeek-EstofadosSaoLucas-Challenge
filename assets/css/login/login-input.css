@@ -1,0 +1,9 @@
+.login__input {
+    margin: 1rem 0;
+}
+
+@media screen and (min-width:768px) {
+    .input {
+        padding: 3% 2% 2% 2%;
+    }
+}

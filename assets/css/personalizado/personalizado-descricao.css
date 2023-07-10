@@ -2,3 +2,15 @@
     padding: .5rem 0;
     color: var(--preto-fraco);
 }
+
+@media screen and (min-width:768px) {
+    .personalizado__descricao {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .personalizado__descricao {
+        padding: 1rem 0;
+    }
+}
