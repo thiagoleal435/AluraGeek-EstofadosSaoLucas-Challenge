@@ -22,12 +22,12 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
-    <link rel="stylesheet" href="./assets/css/rodape/rodape-titulo.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
     <link rel="stylesheet" href="./assets/css/login/login.css">
     <link rel="stylesheet" href="./assets/css/login/login-titulo.css">
+    <link rel="stylesheet" href="./assets/css/login/login-form.css">
     <link rel="stylesheet" href="./assets/css/login/login-input.css">
     <link rel="stylesheet" href="./assets/css/login/login-botao.css">
 
@@ -39,10 +39,12 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
-        </div>
+        <form class="cabecalho__busca" data-formulario>
+            <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
+            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
+                <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
+            </button>
+        </form>
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
@@ -50,18 +52,19 @@
         </div>
     </header>
 
-
     <div class="tudo login">
         <h2 class="login__titulo">Iniciar Sessão</h2>
-        <div class="caixa__input login__input">
-            <input type="email" class="input" name="email" required>
-            <label for="email" class="label">Escreva seu email</label>
-        </div>
-        <div class="caixa__input login__input">
-            <input type="password" class="input" name="senha" required>
-            <label for="senha" class="label">Escreva sua senha</label>
-        </div>
-        <bottom class="login__botao botao">Entrar</bottom>
+        <form method="post" class="login__form" data-formulario-login>
+            <div class="caixa__input login__input">
+                <input type="email" class="input" name="email" data-email required>
+                <label for="email" class="label">Escreva seu email</label>
+            </div>
+            <div class="caixa__input login__input">
+                <input type="password" class="input" name="senha" data-senha required>
+                <label for="senha" class="label">Escreva sua senha</label>
+            </div>
+            <input type="submit" class="login__botao botao" value="Entrar" data-submit>
+        </form>
     </div>
 
     <footer class="rodape">
@@ -108,7 +111,13 @@
         </div>
     </footer>
 
-
+    <script src="./js/validaLogin.js" type="module"></script>
+    <script>
+        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
+        })
+    </script>
 </body>
 
 </html>

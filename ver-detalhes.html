@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
-    <link rel="stylesheet" href="./assets/css/rodape/rodape-titulo.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
+    <link rel="stylesheet" href="./assets/css/detalhes.css">
 </head>
 
 <body>
@@ -34,10 +34,12 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
-        </div>
+        <form class="cabecalho__busca" data-formulario>
+            <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
+            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
+                <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
+            </button>
+        </form>
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
@@ -45,27 +47,25 @@
         </div>
     </header>
 
-    <div class="detalhe__produto">
-        <img src="" alt="" class="detalhe__img">
-        <div class="detalhe__info">
-            <h2 class="detalhe__nome">Sofá retrátil e reclinável 250cm veludo</h2>
-            <h3 class="detalhe__valor">R$ 2.754,99</h3>
-            <p class="detalhe__desconto">5% de desconto à vista ou em 1x no cartão</p>
-            <h3 class="detalhe__valorprazo">Ou em 10x de R$ 290,00 no cartão de crédito</h3>
-            <p class="detalhe__descricao"></p>
+    <div class="tudo detalhe">
+        <div class="detalhe__produto" data-detalhes>
+            <div class="detalhe__imagem">
+                <img src="" alt="" class="detalhe__img">
+            </div>
+            <div class="detalhe__info">
+                <h2 class="detalhe__nome"></h2>
+                <h3 class="detalhe__valor"></h3>
+                <p class="detalhe__desconto"></p>
+                <h3 class="detalhe__valorprazo"></h3>
+            </div>
         </div>
-    </div>
 
-    <div class="detalhe__similares">
-        <h2 class="detalhe__titulo__similiares"></h2>
-        <div class="detalhe__produtos__similares">
-            <div class="caixa__produto"></div>
-            <div class="caixa__produto"></div>
-            <div class="caixa__produto"></div>
-            <div class="caixa__produto"></div>
-            <div class="caixa__produto"></div>
-            <div class="caixa__produto"></div>
+        <div class="detalhe__similares">
+            <h2 class="detalhe__titulo">Produtos similares</h2>
+            <ul class="detalhe__lista" data-lista>
+            </ul>
         </div>
+
     </div>
 
     <footer class="rodape">
@@ -112,6 +112,13 @@
         </div>
     </footer>
 
+    <script src="./js/verDetalhes.js" type="module"></script>
+    <script>
+        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
+        })
+    </script>
 </body>
 
 </html>

@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
-    <link rel="stylesheet" href="./assets/css/rodape/rodape-titulo.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
@@ -35,10 +34,7 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
-        </div>
+
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
@@ -49,31 +45,50 @@
     <div class="tudo">
         <div class="adm__add">
             <h2 class="adm__titulo">Adicionar novo produto</h2>
-            <div class="adm__add__imagem">
-                <div class="adm__img">
-                    <i class="fa-regular fa-image adm__add__icone"></i>
-                    <p class="adm__add__descricao">Arraste a imagem do produto para este campo</p>
+            <form class="adm__fomr" data-formulario>
+                <div class="adm__add__imagem">
+                    <input type="file" class="add__input__imagem" accept="image/*" style="display: none;" data-imagem>
+                    <div class="adm__img">
+                        <img id="preImagem" src="#" alt="Imagem do produto"
+                            style="display: none; max-width: 100%; max-height: 200px;">
+                        <i class="fa-regular fa-image adm__add__icone" data-icone></i>
+                        <p class="adm__add__descricao" data-paragrafo>Arraste a imagem do produto para este campo</p>
+                    </div>
+                    <p>Ou</p>
+                    <buttom class="adm__add__botao botao" data-add-imagem>Procure no seu
+                        computador
+                    </buttom>
                 </div>
-                <p>Ou</p>
-                <bottom class="adm__add__botao botao">Procure no seu computador</bottom>
-            </div>
-            <div class="caixa__input adm__add__input">
-                <input type="text" class="input" name="categoria" required>
-                <label for="categoria" class="label">Categoria</label>
-            </div>
-            <div class="caixa__input adm__add__input">
-                <input type="text" class="input" name="nomeProduto" required>
-                <label for="nomeProduto" class="label">Nome do produto</label>
-            </div>
-            <div class="caixa__input adm__add__input">
-                <input type="number" class="input" min="0" name="preco" required>
-                <label for="preco" class="label">Preço do produto</label>
-            </div>
-            <div class="caixa__input caixa__input--textarea adm__add__input">
-                <textarea class="input input--textarea" name="descricao" required></textarea>
-                <label for="descricao" class="label label--textarea">Descrição do produto</label>
-            </div>
-            <bottom class="adm__add__botao botao">Adicionar produto</bottom>
+                <fieldset class="adm__add__fieldset">
+                    <legend class="fieldset__titulo">Selecione a categoria do produto:</legend>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Sofá retrátil e reclinável">
+                        <label for="Sofá retrátil e reclinável" class="fieldset__label">Sofá retrátil e
+                            reclinável</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Poltrona">
+                        <label for="Poltrone" class="fieldset__label">Poltrona</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Cabeceira">
+                        <label for="Cabeceira" class="fieldset__label">Cabeceira</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Painel">
+                        <label for="Painel" class="fieldset__label">Painel</label>
+                    </div>
+                </fieldset>
+                <div class="caixa__input adm__add__input">
+                    <input type="text" class="input" name="nomeProduto" required data-nome>
+                    <label for="nomeProduto" class="label">Nome do produto</label>
+                </div>
+                <div class="caixa__input adm__add__input">
+                    <input type="number" class="input" min="0" name="preco" required data-precoPrazo>
+                    <label for="preco" class="label">Preço do produto (valor a prazo)</label>
+                </div>
+                <input type="submit" class="adm__add__botao botao" value="Adicionar produto" data-submit>
+            </form>
         </div>
     </div>
 
@@ -120,6 +135,8 @@
             <h3 class="rodape__copyright__texto">Desenvolvido por Thiago Leal - 2023</h3>
         </div>
     </footer>
+
+    <script src="./js/adicionarProduto.js" type="module"></script>
 
 </body>
 

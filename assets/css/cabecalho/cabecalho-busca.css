@@ -22,8 +22,14 @@
 
 .cabecalho__input__icone {
     color: rgba(0, 0, 0, 0.5);
+}
+
+.cabecalho__botao {
+    background: transparent;
+    border: none;
+    cursor: pointer;
     position: absolute;
-    right: 3%;
+    right: 2%;
     top: 30%;
 }
 

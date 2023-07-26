@@ -8,6 +8,10 @@
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.rodape__titulo {
+    color: var(--preto-forte);
+}
+
 .rodape__descricao {
     font-size: .8rem;
     color: var(--preto-fraco);

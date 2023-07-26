@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Todos os nossos produtos | Loja online de estofados e tapeceria</title>
+    <link rel="icon" href="./assets/img/estofados-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-titulo.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-busca.css">
+    <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-icones.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
+    <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
+    <link rel="stylesheet" href="./assets/css/categoria.css">
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__titulo">
+            <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
+            <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
+        </div>
+        <div class="cabecalho__busca">
+            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
+            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
+        </div>
+        <div class="cabecalho__icones">
+            <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
+            <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
+            <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
+        </div>
+    </header>
+
+    <div class="categoria container">
+        <h2 class="categoria__titulo">Todos os produtos</h2>
+        <div class="categoria__produtos">
+            <ul class="categoria__lista" data-lista>
+
+            </ul>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="rodape__caixa">
+            <div class="rodape__icone__titulo">
+                <i class="fa-solid fa-couch rodape__icone"></i>
+                <h3 class="rodape__titulo">Estofados<br><strong>São Lucas</strong></h3>
+            </div>
+            <p class="rodape__endereco">Rua 7 de setembro - Centro - Alagoinha/PE</p>
+            <p class="rodape__telefone"><i class="fa-solid fa-phone-volume rodape__icone__caixa">Tel:</i>(87) 99159 4060
+            </p>
+            <p class="rodape__whatsapp"><i class="fa-brands fa-whatsapp rodape__icone__caixa">WhatsApp:</i>(87) 99159
+                4060</p>
+            <p class="rodape__atendimento"><i
+                    class="fa-regular fa-clipboard rodape__icone__caixa">Atendimento:</i>Segunda a Sexta das 8h às
+                18h - Sábado das 8h às 12h</p>
+            <p class="rodape__sac">sac@estofadossl.com.br</p>
+        </div>
+        <div class="rodape__produtos__contatos">
+            <div class="rodape__produtos">
+                <h3 class="rodape__titulo">Nossos Produtos</h3>
+                <a href="#">
+                    <p class="rodape__descricao">Todos os produtos disponíveis</p>
+                </a>
+            </div>
+            <div class="rodape__contato" id="contato">
+                <h3 class="rodape__titulo">Fale conosco</h3>
+                <div class="caixa__input">
+                    <input type="text" class="input" id="input-nome" name="nome" required>
+                    <label for="nome" class="label">Nome</label>
+                </div>
+                <div class="caixa__input caixa__input--textarea">
+                    <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
+                        required></textarea>
+                    <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
+                </div>
+                <botton class="rodape__botao botao">Enviar Mensagem</botton>
+            </div>
+
+        </div>
+        <div class="rodape__copyright">
+            <h3 class="rodape__copyright__texto">Estofados <strong>São Lucas</strong></h3>
+            <h3 class="rodape__copyright__texto">Desenvolvido por Thiago Leal - 2023</h3>
+        </div>
+    </footer>
+
+    <script src="./js/nossosProdutos.js" type="module"></script>
+
+</body>
+
+</html>

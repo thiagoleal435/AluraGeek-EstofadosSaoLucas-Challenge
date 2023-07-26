@@ -1,0 +1,59 @@
+.detalhe {
+    padding: 3%;
+}
+
+.detalhe__produto {
+    display: flex;
+    gap: 2rem;
+}
+
+.detalhe__imagem {
+    width: 50%;
+}
+
+.detalhe__info {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.detalhe__nome {
+    font-size: 2.5rem;
+    color: var(--preto-fraco);
+}
+
+.detalhe__valor {
+    font-weight: 700;
+}
+
+.detalhe__desconto {
+    color: var(--fundo-secundario);
+}
+
+.detalhe__valorprazo {
+    color: var(--preto-forte);
+}
+
+.detalhe__descricao {
+    text-align: start;
+    line-height: normal;
+}
+
+.detalhe__simlidares {
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe__titulo {
+    font: 2rem;
+    font-weight: 700;
+    text-align: start;
+    padding: .5rem 0;
+}
+
+.detalhe__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

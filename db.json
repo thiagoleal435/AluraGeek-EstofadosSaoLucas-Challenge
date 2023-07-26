@@ -1,0 +1,44 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Sofá retrátil e reclinável 250cm veludo",
+      "preco": 2754.99,
+      "imagem": "./assets/img/categorias-sofa.jpg",
+      "alt": "Sofá retrátil e reclinável",
+      "precoPrazo": 2900,
+      "categoria": "Sofá retrátil e reclinável"
+    },
+    {
+      "id": 2,
+      "nome": "Poltrona capitone 100cm linho",
+      "preco": 854.99,
+      "imagem": "./assets/img/categorias-poltrona.jpg",
+      "alt": "Poltrona capitone",
+      "precoPrazo": 900,
+      "categoria": "Poltrona"
+    },
+    {
+      "id": 3,
+      "nome": "Cabeceira de casal capitone facto - 150cm largura - 120cm altura",
+      "preco": 569.99,
+      "imagem": "./assets/img/categorias-cabeceira.jpg",
+      "alt": "Cabeceira de casal",
+      "precoPrazo": 600,
+      "categoria": "Cabeceira"
+    },
+    {
+      "id": 4,
+      "nome": "Painel full em trapézios facto - 200cm largura - 300cm altura",
+      "preco": 1045.49,
+      "imagem": "./assets/img/categorias-painel.jpg",
+      "alt": "Painel",
+      "precoPrazo": 1100,
+      "categoria": "Painel"
+    }
+  ],
+  "userAdm": {
+    "email": "administrator@gmail.com",
+    "senha": "administrator"
+  }
+}

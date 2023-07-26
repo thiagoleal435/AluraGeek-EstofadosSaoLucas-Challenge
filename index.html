@@ -49,7 +49,6 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-caixa.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-icone-titulo.css">
-    <link rel="stylesheet" href="./assets/css/rodape/rodape-titulo.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
@@ -62,10 +61,12 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
-        </div>
+        <form class="cabecalho__busca" data-formulario>
+            <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
+            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
+                <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
+            </button>
+        </form>
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
@@ -83,7 +84,7 @@
                 <h1 class="banner__titulo">Melhor qualidade<br>e conforto</h1>
                 <h3 class="banner__descricao">Pix : 5% OFF<br>Cartão : até 12X
                 </h3>
-                <botton class="banner__botao botao">Ver produtos</botton>
+                <botton class="banner__botao botao" data-botao-banner>Ver produtos</botton>
             </div>
 
             <bottom class="banner__botao__back"><i class="fa-solid fa-chevron-left banner__icone"></i></bottom>
@@ -95,21 +96,25 @@
             <div class="categorias__top">
                 <div class="categorias__sofa">
                     <h2 class="categorias__titulo">Retrátil e reclinável</h2>
-                    <botton class="categorias__botao botao">Explorar</botton>
+                    <button onclick="redirecionaCategoria(value)" class="categorias__botao botao"
+                        value="Sofá retrátil e reclinável">Explorar</button>
                 </div>
                 <div class="categorias__poltrona">
                     <h2 class="categorias__titulo">Poltronas</h2>
-                    <botton class="categorias__botao botao">Explorar</botton>
+                    <button onclick="redirecionaCategoria(value)" class="categorias__botao botao"
+                        value="Poltrona">Explorar</button>
                 </div>
             </div>
             <div class="categorias__bottom">
                 <div class="categorias__cabeceira">
-                    <h2 class="categorias__titulo">Cabeceiras: solteiro e casal</h2>
-                    <botton class="categorias__botao botao">Explorar</botton>
+                    <h2 class="categorias__titulo">Cabeceiras</h2>
+                    <button onclick="redirecionaCategoria(value)" class="categorias__botao botao"
+                        value="Cabeceira">Explorar</button>
                 </div>
                 <div class="categorias__painel">
                     <h2 class="categorias__titulo">Paineis</h2>
-                    <botton class="categorias__botao botao">Explorar</botton>
+                    <button onclick="redirecionaCategoria(value)" class="categorias__botao botao"
+                        value="Painel">Explorar</button>
                 </div>
             </div>
         </section>
@@ -146,7 +151,7 @@
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 290,00 no cartão de crédito</h3>
                 <a class="botao" href="ver-detalhes.html">
-                    <botton class="produto__botao">Ver detalhes</botton>
+                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
                 </a>
             </div>
             <div class="caixa__produto">
@@ -156,7 +161,7 @@
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 90,00 no cartão de crédito</h3>
                 <a class="botao" href="ver-detalhes.html">
-                    <botton class="produto__botao">Ver detalhes</botton>
+                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
                 </a>
             </div>
             <div class="caixa__produto">
@@ -166,7 +171,7 @@
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 60,00 no cartão de crédito</h3>
                 <a class="botao" href="ver-detalhes.html">
-                    <botton class="produto__botao">Ver detalhes</botton>
+                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
                 </a>
             </div>
             <div class="caixa__produto">
@@ -176,7 +181,7 @@
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 110,00 no cartão de crédito</h3>
                 <a class="botao" href="ver-detalhes.html">
-                    <botton class="produto__botao">Ver detalhes</botton>
+                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
                 </a>
             </div>
         </section>
@@ -187,7 +192,9 @@
                 <p class="personalizado__descricao">Se você precisa de um estofado personalizado, com medidas e design
                     espécifico, fale com o nosso consultor e expresse a sua idéia para que possamos materializa-la
                     juntos!</p>
-                <botton class="personalizado__botao botao" value="botao-consultor">Falar com Consultor</botton>
+                <a href="#contato" class="personalizado__botao botao">
+                    Falar com Consultor
+                </a>
             </div>
             <img src="./assets/img/personalizado-img.jpg" alt="Sofá Personalizado" class="personalizado__img">
         </section>
@@ -226,12 +233,12 @@
         </div>
         <div class="rodape__produtos__contatos">
             <div class="rodape__produtos">
-                <h3 class="rodape__titulo">Nossos Produtos</h3>
-                <a href="#">
+                <a href="todos-os-produtos.html">
+                    <h3 class="rodape__titulo">Nossos Produtos</h3>
                     <p class="rodape__descricao">Todos os produtos disponíveis</p>
                 </a>
             </div>
-            <div class="rodape__contato">
+            <div class="rodape__contato" id="contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
                 <div class="caixa__input">
                     <input type="text" class="input" id="input-nome" name="nome" required>
@@ -252,35 +259,27 @@
         </div>
     </footer>
 
+    <script src="./js/slides.js"></script>
     <script>
-        var imagens = document.getElementsByClassName("banner__imagem");
-        var backBtn = document.getElementsByClassName("banner__botao__back")[0];
-        var nextBtn = document.getElementsByClassName("banner__botao__next")[0];
-        var indiceAtual = 0;
 
-        mostrarImagem(indiceAtual);
+        const botoesLink = document.querySelectorAll("#botao-link");
+        botoesLink.forEach(botao => {
+            botao.addEventListener('click', function (evento) {
+                evento.preventDefault();
+                const nomeDoProduto = this.closest(".caixa__produto").querySelector(".produto__descricao").textContent;
+                window.location.href = `ver-detalhes.html?nome=${nomeDoProduto}`;
+            })
+        })
 
-        backBtn.addEventListener("click", function () {
-            indiceAtual--;
-            if (indiceAtual < 0) {
-                indiceAtual = imagens.length - 1;
-            }
-            mostrarImagem(indiceAtual);
-        });
+        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
+        })
 
-        nextBtn.addEventListener("click", function () {
-            indiceAtual++;
-            if (indiceAtual >= imagens.length) {
-                indiceAtual = 0;
-            }
-            mostrarImagem(indiceAtual);
-        });
+        document.querySelector("[data-botao-banner]").addEventListener('click', () => window.location.href = "todos-os-produtos.html");
 
-        function mostrarImagem(indice) {
-            for (var i = 0; i < imagens.length; i++) {
-                imagens[i].classList.remove("active");
-            }
-            imagens[indice].classList.add("active");
+        function redirecionaCategoria(value) {
+            window.location.href = `ver-categoria.html?categoria=${value}`
         }
     </script>
 

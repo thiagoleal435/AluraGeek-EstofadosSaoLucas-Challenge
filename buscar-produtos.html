@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador | Estofados São Lucas</title>
+    <title>Buscar produtos | Estofados São Lucas</title>
     <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
-    <link rel="stylesheet" href="./assets/css/adm.css">
+    <link rel="stylesheet" href="./assets/css/busca.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <form class="cabecalho__busca" data-formulario>
+        <form action="buscar-produtos.html" class="cabecalho__busca" data-formulario>
             <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
             <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
                 <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
@@ -47,15 +47,11 @@
         </div>
     </header>
 
-    <div class="tudo adm">
-        <div class="adm">
-            <h2 class="adm__titulo">Todos os produtos</h2>
-            <a href="adm-add-produto.html" class="botao">
-                <bottom class="produto__botao">Adicionar produto</bottom>
-            </a>
+    <div class="busca">
+        <div>
+            <h2 class="busca__titulo" data-titulo></h2>
         </div>
-        <ul class="adm__lista" data-lista>
-
+        <ul class="busca__lista" data-lista>
         </ul>
     </div>
 
@@ -103,14 +99,14 @@
         </div>
     </footer>
 
-    <script src="./js/nossosProdutos.js" type="module"></script>
+    <script src="./js/buscarProdutos.js" type="module"></script>
     <script>
         document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
             evento.preventDefault();
-            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
+            const dadoDaPesquisa = document.querySelector("[data-pesquisa]").value;
+            window.location.href = `buscar-produtos.html?q=${dadoDaPesquisa}`;
         })
     </script>
-
 </body>
 
 </html>

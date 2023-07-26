@@ -1,0 +1,19 @@
+.busca {
+    padding: 2.5%;
+}
+
+.busca__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--preto-forte);
+    text-align: center;
+    text-shadow: var(--sombra-titulo);
+}
+
+.busca__lista {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}

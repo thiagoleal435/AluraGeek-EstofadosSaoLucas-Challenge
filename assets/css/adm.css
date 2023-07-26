@@ -13,13 +13,22 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 2.5%;
+    padding: 1.5% 2%;
 }
 
 .adm__titulo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: .5rem;
+    align-self: center;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.adm__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2%;
 }
 
 @media screen and (min-width:768px) {
@@ -35,6 +44,11 @@
     flex-direction: column;
     padding: 5%;
     background-color: white;
+}
+
+.adm__form {
+    display: flex;
+    flex-direction: column;
 }
 
 .adm__add__imagem {
@@ -53,16 +67,61 @@
 .adm__img {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     padding: 5%;
     color: rgba(0, 0, 0, 0.5);
     border: 2px dashed rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .adm__add__botao {
+    font-size: 1.2rem;
     text-align: center;
     margin: .5rem 0;
+    align-self: center;
+}
+
+/* Campo fieldset0 */
+
+.adm__add__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5% 0;
+}
+
+.fieldset__titulo {
+    font-size: 1.2rem;
+    color: var(--preto-forte);
+    font-weight: 700;
+}
+
+.fieldset__caixa__radio {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5% 0;
+}
+
+.fieldset__input {
+    appearance: none;
+
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+
+    border: 2px solid #999;
+    transition: .3s all linear;
+}
+
+.fieldset__input:checked {
+    border: 6px solid var(--preto-fraco)
+}
+
+.fieldset__label {
+    color: var(--fundo-secundario);
+    font-weight: 700;
 }
 
 @media screen and (min-width:768px) {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador | Estofados São Lucas</title>
+    <title>| Categorias | Loja online de estofados e tapeceria</title>
     <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
-    <link rel="stylesheet" href="./assets/css/adm.css">
+    <link rel="stylesheet" href="./assets/css/categoria.css">
+
 </head>
 
 <body>
@@ -47,16 +48,13 @@
         </div>
     </header>
 
-    <div class="tudo adm">
-        <div class="adm">
-            <h2 class="adm__titulo">Todos os produtos</h2>
-            <a href="adm-add-produto.html" class="botao">
-                <bottom class="produto__botao">Adicionar produto</bottom>
-            </a>
-        </div>
-        <ul class="adm__lista" data-lista>
+    <div class="categoria container">
+        <h2 class="categoria__titulo" data-titulo></h2>
+        <div class="categoria__produtos">
+            <ul class="categoria__lista" data-lista>
 
-        </ul>
+            </ul>
+        </div>
     </div>
 
     <footer class="rodape">
@@ -82,7 +80,7 @@
                     <p class="rodape__descricao">Todos os produtos disponíveis</p>
                 </a>
             </div>
-            <div class="rodape__contato">
+            <div class="rodape__contato" id="contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
                 <div class="caixa__input">
                     <input type="text" class="input" id="input-nome" name="nome" required>
@@ -103,14 +101,13 @@
         </div>
     </footer>
 
-    <script src="./js/nossosProdutos.js" type="module"></script>
+    <script src="./js/mostrarCategoria.js" type="module"></script>
     <script>
         document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
             evento.preventDefault();
             window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
         })
     </script>
-
 </body>
 
 </html>

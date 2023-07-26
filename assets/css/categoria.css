@@ -1,0 +1,20 @@
+.categoria {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5% 0;
+}
+
+.categoria__titulo {
+    font-size: 2rem;
+    color: var(--preto-forte);
+    font-weight: 700;
+    text-align: center;
+    text-shadow: var(--sombra-titulo);
+    margin-bottom: 2rem;
+}
+
+.categoria__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
