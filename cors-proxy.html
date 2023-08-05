@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const apiUrl = 'https://estofados-sao-lucas-b658e17b3f1b.herokuapp.com/';
+
+        async function fetchData(url) {
+            try {
+                const response = await fetch(proxyUrl + url);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                return null;
+            }
+        }
+
+        async function fetchProductsByCategory(category) {
+            const url = apiUrl + 'produtos?categoria=' + encodeURIComponent(category);
+            return fetchData(url);
+        }
+
+        // Aqui você pode adicionar outras funções de fetch, caso necessário
+
+        // Exemplo de função para listar produtos da categoria "Sofá retrátil e reclinável"
+        async function listarProdutosDaCategoria() {
+            const categoria = "Sofá retrátil e reclinável";
+            const produtos = await fetchProductsByCategory(categoria);
+            console.log(produtos);
+            // Aqui você pode fazer o que precisa com os dados dos produtos
+        }
+
+        listarProdutosDaCategoria();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
