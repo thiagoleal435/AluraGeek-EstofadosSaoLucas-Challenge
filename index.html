@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Estofados São Lucas | Loja online de estofados e tapeceria</title>
+    <title>Home | Estofados São Lucas | Loja online de estofados e tapeceria</title>
     <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-titulo.css">
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-busca.css">
     <link rel="stylesheet" href="./assets/css/cabecalho/cabecalho-icones.css">
+    <link rel="stylesheet" href="./assets/css/barra-pesquisa.css">
     <link rel="stylesheet" href="./assets/css/banner/banner.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-imagem.css">
     <link rel="stylesheet" href="./assets/css/banner/banner-info.css">
@@ -63,18 +64,30 @@
         </div>
         <form class="cabecalho__busca" data-formulario>
             <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
-            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
+            <button class="cabecalho__botao" data-botao-pesquisa>
                 <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
             </button>
         </form>
         <div class="cabecalho__icones">
-            <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
+            <button class="cabecalho__botao__pesquisa" data-barra-pesquisa><i
+                    class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i></button>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
             <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
         </div>
     </header>
 
+
     <div class="tudo">
+        <div class="barra__pesquisa">
+            <form class="barra__formulario" id="formulario-barra" data-formulario>
+                <input type="text" class="barra__pesquisa__input" placeholder="O que deseja encontrar?"
+                    id="barra-pesquisa" data-pesquisa>
+                <button class="barra__pesquisa__botao" data-botao-pesquisa>
+                    <i class="fa-solid fa-magnifying-glass barra__input__icone"></i>
+                </button>
+            </form>
+        </div>
+
         <section class="banner">
             <img src="./assets/img/banner.jpg" alt="Banner numero 1" class="banner__imagem">
             <img src="./assets/img/instagram-img (1).jpg" alt="Banner numero 2" class="banner__imagem">
@@ -146,43 +159,41 @@
             <h2 class="maisvendidos__titulo">Mais vendidos</h2>
             <div class="caixa__produto">
                 <img src="./assets/img/categorias-sofa.jpg" alt="Sofá retrátil e reclinável" class="produto__img">
+                <p class="produto__id">1</p>
                 <p class="produto__descricao">Sofá retrátil e reclinável 250cm veludo</p>
                 <h3 class="produto__valor">R$ 2.754,99</h3>
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 290,00 no cartão de crédito</h3>
-                <a class="botao" href="ver-detalhes.html">
-                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
-                </a>
+                <botton class="botao produto__botao">Ver detalhes</botton>
             </div>
             <div class="caixa__produto">
                 <img src="./assets/img/categorias-poltrona.jpg" alt="Poltrona capitone" class="produto__img">
+                <p class="produto__id">2</p>
                 <p class="produto__descricao">Poltrona capitone 100cm linho</p>
                 <h3 class="produto__valor">R$ 854,99</h3>
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 90,00 no cartão de crédito</h3>
-                <a class="botao" href="ver-detalhes.html">
-                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
-                </a>
+                <botton class="botao produto__botao">Ver detalhes</botton>
+
             </div>
             <div class="caixa__produto">
                 <img src="./assets/img/categorias-cabeceira.jpg" alt="Cabeceira de casal" class="produto__img">
+                <p class="produto__id">3</p>
                 <p class="produto__descricao">Cabeceira de casal capitone facto - 150cm largura - 120cm altura</p>
                 <h3 class="produto__valor">R$ 569,99</h3>
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 60,00 no cartão de crédito</h3>
-                <a class="botao" href="ver-detalhes.html">
-                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
-                </a>
+                <botton class="botao produto__botao">Ver detalhes</botton>
+
             </div>
             <div class="caixa__produto">
                 <img src="./assets/img/categorias-painel.jpg" alt="Painel" class="produto__img">
+                <p class="produto__id">4</p>
                 <p class="produto__descricao">Painel full em trapézios facto - 200cm largura - 300cm altura</p>
                 <h3 class="produto__valor">R$ 1045,49</h3>
                 <p class="produto__desconto">5% de desconto à vista ou em 1x no cartão</p>
                 <h3 class="produto__valorprazo">Ou em 10x de R$ 110,00 no cartão de crédito</h3>
-                <a class="botao" href="ver-detalhes.html">
-                    <botton id="botao-link" class="produto__botao">Ver detalhes</botton>
-                </a>
+                <botton class="botao produto__botao">Ver detalhes</botton>
             </div>
         </section>
 
@@ -240,18 +251,21 @@
             </div>
             <div class="rodape__contato" id="contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
-                <div class="caixa__input">
-                    <input type="text" class="input" id="input-nome" name="nome" required>
-                    <label for="nome" class="label">Nome</label>
-                </div>
-                <div class="caixa__input caixa__input--textarea">
-                    <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
-                        required></textarea>
-                    <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
-                </div>
-                <botton class="rodape__botao botao">Enviar Mensagem</botton>
+                <form class="rodape__formulario" data-formulario-rodape>
+                    <div class="caixa__input">
+                        <input type="text" class="input" id="input-nome" name="nome" required>
+                        <label for="nome" class="label">Nome</label>
+                    </div>
+                    <span class="span__nome"></span>
+                    <div class="caixa__input caixa__input--textarea">
+                        <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
+                            required></textarea>
+                        <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
+                    </div>
+                    <span class="span__mensagem"></span>
+                    <button type="submit" class="rodape__botao botao">Enviar Mensagem</button>
+                </form>
             </div>
-
         </div>
         <div class="rodape__copyright">
             <h3 class="rodape__copyright__texto">Estofados <strong>São Lucas</strong></h3>
@@ -260,23 +274,31 @@
     </footer>
 
     <script src="./js/slides.js"></script>
+    <script src="./js/validaFormularioRodape.js"></script>
     <script>
+        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value.trim()}`;
+        })
 
-        const botoesLink = document.querySelectorAll("#botao-link");
+        document.querySelector("#formulario-barra").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("#barra-pesquisa").value.trim()}`;
+        });
+
+        document.querySelector("[data-barra-pesquisa]").addEventListener('click', () => {
+            const barraDePesquisa = document.querySelector(".barra__pesquisa");
+            barraDePesquisa.classList.toggle('expandir');
+        })
+
+        const botoesLink = document.querySelectorAll(".produto__botao");
         botoesLink.forEach(botao => {
             botao.addEventListener('click', function (evento) {
                 evento.preventDefault();
-                const nomeDoProduto = this.closest(".caixa__produto").querySelector(".produto__descricao").textContent;
-                window.location.href = `ver-detalhes.html?nome=${nomeDoProduto}`;
+                const idDoProduto = this.closest(".caixa__produto").querySelector(".produto__id").textContent;
+                window.location.href = `ver-detalhes.html?id=${idDoProduto}`;
             })
         })
-
-        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
-        })
-
-        document.querySelector("[data-botao-banner]").addEventListener('click', () => window.location.href = "todos-os-produtos.html");
 
         function redirecionaCategoria(value) {
             window.location.href = `ver-categoria.html?categoria=${value}`

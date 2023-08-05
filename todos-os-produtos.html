@@ -35,10 +35,12 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <div class="cabecalho__busca">
-            <input type="text" class="cabecalho__input" id="cabecalhoBusca" placeholder="O que deseja encontrar?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i></a>
-        </div>
+        <form class="cabecalho__busca" data-formulario>
+            <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
+            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
+                <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
+            </button>
+        </form>
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
@@ -100,6 +102,14 @@
     </footer>
 
     <script src="./js/nossosProdutos.js" type="module"></script>
+    <script src="./js/verDetalhes.js" type="module"></script>
+    <script src="./js/validaFormularioRodape.js"></script>
+    <script>
+        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
+        })
+    </script>
 
 </body>
 

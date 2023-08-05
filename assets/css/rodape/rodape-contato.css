@@ -11,6 +11,12 @@
     margin-top: .5rem;
 }
 
+.span__nome,
+.span__mensagem {
+    color: var(--fundo-secundario);
+    text-align: start;
+}
+
 @media screen and (min-width:768px) {
     .rodape__contato {
         width: 100%;

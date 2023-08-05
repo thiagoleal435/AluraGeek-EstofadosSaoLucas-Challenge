@@ -45,17 +45,15 @@
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
             <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
         </div>
+        <a href="index.html" class="botao botao__sair">Sair da sessão</a>
     </header>
 
     <div class="tudo adm">
         <div class="adm">
             <h2 class="adm__titulo">Todos os produtos</h2>
-            <a href="adm-add-produto.html" class="botao">
-                <bottom class="produto__botao">Adicionar produto</bottom>
-            </a>
+            <bottom class="adm__botao__add botao" data-add-produto>Adicionar produto</bottom>
         </div>
         <ul class="adm__lista" data-lista>
-
         </ul>
     </div>
 
@@ -77,12 +75,12 @@
         </div>
         <div class="rodape__produtos__contatos">
             <div class="rodape__produtos">
-                <h3 class="rodape__titulo">Nossos Produtos</h3>
-                <a href="#">
+                <a href="todos-os-produtos.html">
+                    <h3 class="rodape__titulo">Nossos Produtos</h3>
                     <p class="rodape__descricao">Todos os produtos disponíveis</p>
                 </a>
             </div>
-            <div class="rodape__contato">
+            <div class="rodape__contato" id="contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
                 <div class="caixa__input">
                     <input type="text" class="input" id="input-nome" name="nome" required>
@@ -104,13 +102,31 @@
     </footer>
 
     <script src="./js/nossosProdutos.js" type="module"></script>
+    <script src="./js/deletarProduto.js" type="module"></script>
+    <script src="./js/adicionarProduto.js" type="module"></script>
+    <script src="./js/atualizarProduto.js" type="module"></script>
     <script>
         document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
             evento.preventDefault();
             window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
         })
-    </script>
 
+        document.querySelector(".adm__lista").addEventListener("click", function (evento) {
+            if (evento.target.classList.contains("produto__botao")) {
+                evento.preventDefault();
+                const idDoProduto = evento.target.dataset.id;
+                window.location.href = `ver-detalhes.html?id=${idDoProduto}`;
+            }
+        });
+
+        document.querySelector(".adm__lista").addEventListener('click', function (evento) {
+            if (evento.target.classList.contains("produto__editar")) {
+                evento.preventDefault();
+                const id = evento.target.dataset.id;
+                window.location.href = `adm-atualizar-produto.html?id=${id}`;
+            }
+        })
+    </script>
 </body>
 
 </html>

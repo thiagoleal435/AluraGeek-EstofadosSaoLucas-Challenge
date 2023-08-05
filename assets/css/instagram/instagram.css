@@ -1,6 +1,5 @@
 .instagram {
-    padding-top: 2rem;
-    padding-bottom: 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
 }

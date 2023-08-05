@@ -27,3 +27,5 @@ function mostrarImagem(indice) {
     }
     imagens[indice].classList.add("active");
 }
+
+document.querySelector("[data-botao-banner]").addEventListener('click', () => window.location.href = "todos-os-produtos.html");

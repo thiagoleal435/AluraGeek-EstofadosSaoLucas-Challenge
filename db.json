@@ -3,20 +3,22 @@
     {
       "id": 1,
       "nome": "Sofá retrátil e reclinável 250cm veludo",
-      "preco": 2754.99,
+      "preco": 2850,
       "imagem": "./assets/img/categorias-sofa.jpg",
       "alt": "Sofá retrátil e reclinável",
-      "precoPrazo": 2900,
-      "categoria": "Sofá retrátil e reclinável"
+      "precoPrazo": "3000",
+      "categoria": "Sofá retrátil e reclinável",
+      "descricao": "Sofá com acentos retráteis que se expadem em média 30cm a frente, e encostos reclináveis que angulam 45° até para trás. Com almofadas travesseiro e rodinhas para facilitar o manuseio do assento , além de material de ótima qualidade nos assento com espumas pré-soft D45 e fibra siliconada nos encostos."
     },
     {
       "id": 2,
       "nome": "Poltrona capitone 100cm linho",
-      "preco": 854.99,
+      "preco": 807.5,
       "imagem": "./assets/img/categorias-poltrona.jpg",
-      "alt": "Poltrona capitone",
-      "precoPrazo": 900,
-      "categoria": "Poltrona"
+      "alt": "Poltrona",
+      "precoPrazo": "850",
+      "categoria": "Poltrona",
+      "descricao": "Poltrona em capitone, proporcionando um acabemento mais premium e sorfisticado. Acompanha 2 almofas quadradas de tamnhos variáveis"
     },
     {
       "id": 3,
@@ -25,16 +27,18 @@
       "imagem": "./assets/img/categorias-cabeceira.jpg",
       "alt": "Cabeceira de casal",
       "precoPrazo": 600,
-      "categoria": "Cabeceira"
+      "categoria": "Cabeceira",
+      "descricao": "Cabeceira para cama casal com largura entre 140cm e 160cm, com acabamento capitone e material de alta qualida"
     },
     {
       "id": 4,
       "nome": "Painel full em trapézios facto - 200cm largura - 300cm altura",
-      "preco": 1045.49,
+      "preco": 1092.5,
       "imagem": "./assets/img/categorias-painel.jpg",
       "alt": "Painel",
-      "precoPrazo": 1100,
-      "categoria": "Painel"
+      "precoPrazo": "1150",
+      "categoria": "Painel",
+      "descricao": "Painel com design em trapézios e integração ambiente, proporciando mais luxuosidade e conforto ao ambiente. Encaixes traseiros fixos e de alta resistência, garantindo a estabilidade com a superfície da parede."
     }
   ],
   "userAdm": {

@@ -33,6 +33,15 @@
     top: 30%;
 }
 
+.cabecalho__botao__pesquisa {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--preto-forte);
+    font-size: 1rem;
+    padding: 0;
+}
+
 @media screen and (min-width:768px) {
     .cabecalho__icone__search {
         display: none;

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador | Estofados São Lucas</title>
+    <title>Administrador | Adicionar produto | Estofados São Lucas</title>
     <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,13 +40,22 @@
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
             <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
         </div>
+        <a href="adm.html" class="botao botao__sair">Menu administrador</a>
     </header>
 
     <div class="tudo">
         <div class="adm__add">
-            <h2 class="adm__titulo">Adicionar novo produto</h2>
+            <h2 class="adm__titulo" data-titulo>Adicionar novo produto</h2>
             <form class="adm__fomr" data-formulario>
-                <div class="adm__add__imagem">
+                <div class="caixa__input adm__add__input">
+                    <input type="number" class="input" name="id" readonly data-id>
+                    <label for="id" class="label__id">ID</label>
+                </div>
+                <div class="caixa__input adm__add__input">
+                    <input type="text" class="input" name="imagem" required data-imagem>
+                    <label for="imagem" class="label">URL da imagem</label>
+                </div>
+                <!-- <div class="adm__add__imagem">
                     <input type="file" class="add__input__imagem" accept="image/*" style="display: none;" data-imagem>
                     <div class="adm__img">
                         <img id="preImagem" src="#" alt="Imagem do produto"
@@ -58,35 +67,46 @@
                     <buttom class="adm__add__botao botao" data-add-imagem>Procure no seu
                         computador
                     </buttom>
+                </div> -->
+                <div class="caixa__input adm__add__input">
+                    <input type="text" class="input" name="nomeProduto" minlength="5" required data-nome>
+                    <label for="nomeProduto" class="label">Nome do produto</label>
                 </div>
+                <span class="span__adm__nome"></span>
+                <div class="caixa__input adm__add__input">
+                    <input type="number" class="input" min="0" name="preco" max="10000" required data-precoPrazo>
+                    <label for="preco" class="label">Preço do produto (valor a prazo)</label>
+                </div>
+                <span class="span__adm__preco"></span>
+                <div class="caixa__input adm__add__input">
+                    <textarea name="textarea" cols="30" rows="5" class="input input__textarea" minlength="10" required
+                        data-descricao></textarea>
+                    <label for="textarea" class="label label__textarea">
+                        Descrição do produto
+                    </label>
+                </div>
+                <span class="span__adm__descricao"></span>
                 <fieldset class="adm__add__fieldset">
                     <legend class="fieldset__titulo">Selecione a categoria do produto:</legend>
                     <div class="fieldset__caixa__radio">
-                        <input type="radio" class="fieldset__input" name="categoria" value="Sofá retrátil e reclinável">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Sofá retrátil e reclinável"
+                            required>
                         <label for="Sofá retrátil e reclinável" class="fieldset__label">Sofá retrátil e
                             reclinável</label>
                     </div>
                     <div class="fieldset__caixa__radio">
-                        <input type="radio" class="fieldset__input" name="categoria" value="Poltrona">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Poltrona" required>
                         <label for="Poltrone" class="fieldset__label">Poltrona</label>
                     </div>
                     <div class="fieldset__caixa__radio">
-                        <input type="radio" class="fieldset__input" name="categoria" value="Cabeceira">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Cabeceira" required>
                         <label for="Cabeceira" class="fieldset__label">Cabeceira</label>
                     </div>
                     <div class="fieldset__caixa__radio">
-                        <input type="radio" class="fieldset__input" name="categoria" value="Painel">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Painel" required>
                         <label for="Painel" class="fieldset__label">Painel</label>
                     </div>
                 </fieldset>
-                <div class="caixa__input adm__add__input">
-                    <input type="text" class="input" name="nomeProduto" required data-nome>
-                    <label for="nomeProduto" class="label">Nome do produto</label>
-                </div>
-                <div class="caixa__input adm__add__input">
-                    <input type="number" class="input" min="0" name="preco" required data-precoPrazo>
-                    <label for="preco" class="label">Preço do produto (valor a prazo)</label>
-                </div>
                 <input type="submit" class="adm__add__botao botao" value="Adicionar produto" data-submit>
             </form>
         </div>
@@ -117,16 +137,18 @@
             </div>
             <div class="rodape__contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
-                <div class="caixa__input">
-                    <input type="text" class="input" id="input-nome" name="nome" required>
-                    <label for="nome" class="label">Nome</label>
-                </div>
-                <div class="caixa__input caixa__input--textarea">
-                    <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
-                        required></textarea>
-                    <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
-                </div>
-                <botton class="rodape__botao botao">Enviar Mensagem</botton>
+                <form class="rodape__formulario" data-formulario-rodape>
+                    <div class="caixa__input">
+                        <input type="text" class="input" id="input-nome" name="nome" required>
+                        <label for="nome" class="label">Nome</label>
+                    </div>
+                    <div class="caixa__input caixa__input--textarea">
+                        <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
+                            required></textarea>
+                        <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
+                    </div>
+                    <botton type="submit" class="rodape__botao botao">Enviar Mensagem</botton>
+                </form>
             </div>
 
         </div>
@@ -136,6 +158,7 @@
         </div>
     </footer>
 
+    <script src="./js/validaFormularioAdm.js"></script>
     <script src="./js/adicionarProduto.js" type="module"></script>
 
 </body>

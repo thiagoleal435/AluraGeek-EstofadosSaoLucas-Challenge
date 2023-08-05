@@ -1,54 +1,73 @@
-.detalhe {
-    padding: 3%;
-}
-
 .detalhe__produto {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    padding: 5% 10%;
 }
 
 .detalhe__imagem {
-    width: 50%;
+    position: relative;
+    width: 100%;
+    height: calc(70vh - 51px);
+}
+
+.detalhe__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .detalhe__info {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: start;
+    justify-content: center;
     flex-direction: column;
+    gap: .5rem;
 }
 
 .detalhe__nome {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--preto-fraco);
 }
 
 .detalhe__valor {
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .detalhe__desconto {
+    font-size: 1.2rem;
     color: var(--fundo-secundario);
 }
 
 .detalhe__valorprazo {
+    font-size: 1.2rem;
     color: var(--preto-forte);
 }
 
 .detalhe__descricao {
+    color: var(--preto-fraco);
     text-align: start;
     line-height: normal;
 }
 
-.detalhe__simlidares {
+/*  */
+
+.detalhe__similares {
     display: flex;
     flex-direction: column;
+    padding: 0 10%;
 }
 
 .detalhe__titulo {
-    font: 2rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: var(--preto-fraco);
     text-align: start;
+    text-shadow: var(--sombra-titulo);
     padding: .5rem 0;
 }
 
@@ -56,4 +75,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+    .detalhe__produto {
+        flex-wrap: nowrap;
+    }
 }

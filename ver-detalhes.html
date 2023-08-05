@@ -47,25 +47,13 @@
         </div>
     </header>
 
-    <div class="tudo detalhe">
-        <div class="detalhe__produto" data-detalhes>
-            <div class="detalhe__imagem">
-                <img src="" alt="" class="detalhe__img">
-            </div>
-            <div class="detalhe__info">
-                <h2 class="detalhe__nome"></h2>
-                <h3 class="detalhe__valor"></h3>
-                <p class="detalhe__desconto"></p>
-                <h3 class="detalhe__valorprazo"></h3>
-            </div>
-        </div>
+    <div class="detalhe__produto" data-detalhes>
+    </div>
 
-        <div class="detalhe__similares">
-            <h2 class="detalhe__titulo">Produtos similares</h2>
-            <ul class="detalhe__lista" data-lista>
-            </ul>
-        </div>
-
+    <div class="detalhe__similares">
+        <h2 class="detalhe__titulo">Produtos similares</h2>
+        <ul class="detalhe__lista" data-lista>
+        </ul>
     </div>
 
     <footer class="rodape">
@@ -86,25 +74,28 @@
         </div>
         <div class="rodape__produtos__contatos">
             <div class="rodape__produtos">
-                <h3 class="rodape__titulo">Nossos Produtos</h3>
-                <a href="#">
+                <a href="todos-os-produtos.html">
+                    <h3 class="rodape__titulo">Nossos Produtos</h3>
                     <p class="rodape__descricao">Todos os produtos disponíveis</p>
                 </a>
             </div>
-            <div class="rodape__contato">
+            <div class="rodape__contato" id="contato">
                 <h3 class="rodape__titulo">Fale conosco</h3>
-                <div class="caixa__input">
-                    <input type="text" class="input" id="input-nome" name="nome" required>
-                    <label for="nome" class="label">Nome</label>
-                </div>
-                <div class="caixa__input caixa__input--textarea">
-                    <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
-                        required></textarea>
-                    <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
-                </div>
-                <botton class="rodape__botao botao">Enviar Mensagem</botton>
+                <form class="rodape__formulario" data-formulario-rodape>
+                    <div class="caixa__input">
+                        <input type="text" class="input" id="input-nome" name="nome" required>
+                        <label for="nome" class="label">Nome</label>
+                    </div>
+                    <span class="span__nome"></span>
+                    <div class="caixa__input caixa__input--textarea">
+                        <textarea class="input input--textarea" id="textarea-mensagem" name="mensagem" maxlength="200"
+                            required></textarea>
+                        <label for="mensagem" class="label label--textarea">Escreva sua Mensagem</label>
+                    </div>
+                    <span class="span__mensagem"></span>
+                    <botton type="submit" class="rodape__botao botao">Enviar Mensagem</botton>
+                </form>
             </div>
-
         </div>
         <div class="rodape__copyright">
             <h3 class="rodape__copyright__texto">Estofados <strong>São Lucas</strong></h3>
@@ -113,6 +104,7 @@
     </footer>
 
     <script src="./js/verDetalhes.js" type="module"></script>
+    <script src="./js/validaFormularioRodape.js"></script>
     <script>
         document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
             evento.preventDefault();

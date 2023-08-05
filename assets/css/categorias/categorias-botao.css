@@ -1,6 +1,12 @@
 .categorias__botao {
-    padding: 1rem;
+    padding: .5rem;
     position: absolute;
     bottom: 5%;
     right: 5%;
+}
+
+@media screen and (min-width:768px) {
+    .categorias__botao {
+        padding: 1rem;
+    }
 }

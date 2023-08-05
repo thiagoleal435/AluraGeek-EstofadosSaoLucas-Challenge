@@ -102,11 +102,20 @@
     </footer>
 
     <script src="./js/mostrarCategoria.js" type="module"></script>
+    <script src="./js/validaFormularioRodape.js"></script>
     <script>
         document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
             evento.preventDefault();
             window.location.href = `buscar-produtos.html?q=${document.querySelector("[data-pesquisa]").value}`;
         })
+
+        document.querySelector(".categoria__lista").addEventListener("click", function (event) {
+            if (event.target.classList.contains("produto__botao")) {
+                event.preventDefault();
+                const idDoProduto = event.target.dataset.id;
+                window.location.href = `ver-detalhes.html?id=${idDoProduto}`;
+            }
+        });
     </script>
 </body>
 

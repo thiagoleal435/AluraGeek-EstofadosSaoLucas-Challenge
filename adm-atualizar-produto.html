@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar produtos | Estofados São Lucas</title>
+    <title>Administrador | Atualizar produto | Estofados São Lucas</title>
     <link rel="icon" href="./assets/img/estofados-logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./assets/css/rodape/rodape-produtos.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-contato.css">
     <link rel="stylesheet" href="./assets/css/rodape/rodape-copyright.css">
-    <link rel="stylesheet" href="./assets/css/busca.css">
+    <link rel="stylesheet" href="./assets/css/adm.css">
 </head>
 
 <body>
@@ -34,25 +34,78 @@
             <a href="index.html"><i class="fa-solid fa-couch cabecalho__logo"></i></a>
             <p class="cabecalho__marca">Estofados <strong>São Lucas</strong></p>
         </div>
-        <form action="buscar-produtos.html" class="cabecalho__busca" data-formulario>
-            <input type="text" class="cabecalho__input" placeholder="O que deseja encontrar?" data-pesquisa>
-            <button type="submit" class="cabecalho__botao" data-botao-pesquisa>
-                <i class="fa-solid fa-magnifying-glass cabecalho__input__icone"></i>
-            </button>
-        </form>
+
         <div class="cabecalho__icones">
             <i class="fa-solid fa-magnifying-glass cabecalho__icone__search"></i>
             <a href="login.html"><i class="fa-solid fa-user cabecalho__icone__user"></i></a>
             <i class="fa-solid fa-cart-shopping cabecalho__icone__cart"></i>
         </div>
+        <a href="adm.html" class="botao botao__sair">Menu administrador</a>
     </header>
 
-    <div class="busca">
-        <div>
-            <h2 class="busca__titulo" data-titulo></h2>
+    <div class="tudo">
+        <div class="adm__add">
+            <h2 class="adm__titulo" data-titulo>Atualizar produto</h2>
+            <form class="adm__fomr" data-formulario>
+                <div class="caixa__input adm__add__input">
+                    <input type="number" class="input" name="id" readonly data-id>
+                    <label for="id" class="label__id">ID</label>
+                </div>
+                <div class="caixa__input adm__add__input">
+                    <input type="text" class="input" name="imagem" required data-imagem>
+                    <label for="imagem" class="label">URL da imagem</label>
+                </div>
+                <!-- <div class="adm__add__imagem">
+                    <input type="file" class="add__input__imagem" accept="image/*" style="display: none;" data-imagem>
+                    <div class="adm__img">
+                        <img id="preImagem" src="#" alt="Imagem do produto"
+                            style="display: none; max-width: 100%; max-height: 200px;">
+                        <i class="fa-regular fa-image adm__add__icone" data-icone></i>
+                        <p class="adm__add__descricao" data-paragrafo>Arraste a imagem do produto para este campo</p>
+                    </div>
+                    <p>Ou</p>
+                    <buttom class="adm__add__botao botao" data-add-imagem>Procure no seu
+                        computador
+                    </buttom>
+                </div> -->
+                <div class="caixa__input adm__add__input">
+                    <input type="text" class="input" name="nomeProduto" required data-nome>
+                    <label for="nomeProduto" class="label">Nome do produto</label>
+                </div>
+                <div class="caixa__input adm__add__input">
+                    <input type="number" class="input" min="0" name="preco" required data-precoPrazo>
+                    <label for="preco" class="label">Preço do produto (valor a prazo)</label>
+                </div>
+                <div class="caixa__input adm__add__input">
+                    <textarea name="textarea" cols="30" rows="5" class="input input__textarea" required
+                        data-descricao></textarea>
+                    <label for="textarea" class="label label__textarea">
+                        Descrição do produto
+                    </label>
+                </div>
+                <fieldset class="adm__add__fieldset">
+                    <legend class="fieldset__titulo">Selecione a categoria do produto:</legend>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Sofá retrátil e reclinável">
+                        <label for="Sofá retrátil e reclinável" class="fieldset__label">Sofá retrátil e
+                            reclinável</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Poltrona">
+                        <label for="Poltrone" class="fieldset__label">Poltrona</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Cabeceira">
+                        <label for="Cabeceira" class="fieldset__label">Cabeceira</label>
+                    </div>
+                    <div class="fieldset__caixa__radio">
+                        <input type="radio" class="fieldset__input" name="categoria" value="Painel">
+                        <label for="Painel" class="fieldset__label">Painel</label>
+                    </div>
+                </fieldset>
+                <input type="submit" class="adm__add__botao botao" value="Adicionar produto" data-submit>
+            </form>
         </div>
-        <ul class="busca__lista" data-lista>
-        </ul>
     </div>
 
     <footer class="rodape">
@@ -99,23 +152,8 @@
         </div>
     </footer>
 
-    <script src="./js/buscarProdutos.js" type="module"></script>
-    <script src="./js/validaFormulario.js"></script>
-    <script>
-        document.querySelector("[data-formulario]").addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const dadoDaPesquisa = document.querySelector("[data-pesquisa]").value;
-            window.location.href = `buscar-produtos.html?q=${dadoDaPesquisa}`;
-        })
+    <script src="./js/atualizarProduto.js" type="module"></script>
 
-        document.querySelector(".busca__lista").addEventListener("click", function (event) {
-            if (event.target.classList.contains("produto__botao")) {
-                event.preventDefault();
-                const nomeDoProduto = event.target.dataset.nome;
-                window.location.href = `ver-detalhes.html?nome=${nomeDoProduto}`;
-            }
-        });
-    </script>
 </body>
 
 </html>

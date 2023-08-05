@@ -10,11 +10,13 @@
     font-weight: 700;
     text-align: center;
     text-shadow: var(--sombra-titulo);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .categoria__lista {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+
+@media screen and (min-width: 769px) {}

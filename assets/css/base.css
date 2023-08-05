@@ -32,6 +32,7 @@ nav {
 .tudo {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .container {
@@ -42,17 +43,56 @@ nav {
 
 .caixa__produto {
     display: grid;
+    margin: 0 auto;
     padding: 5%;
-    margin-bottom: 5%;
+    width: 80%;
+    margin-bottom: 2rem;
     background-color: white;
     border-radius: 5px;
     border: 1px solid rgba(222, 21, 21, 0.5);
+}
+
+.produto__imagem {
+    position: relative;
 }
 
 .produto__img {
     width: 100%;
     height: 300px;
     border-radius: inherit;
+}
+
+.produto__excluir,
+.produto__editar {
+    display: none;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.produto__excluir {
+    background-color: var(--fundo-secundario);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.icone__excluir {
+    color: white;
+}
+
+.produto__editar {
+    background-color: var(--fundo-secundario);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.icone__editar {
+    color: white;
+}
+
+.produto__id {
+    display: none;
 }
 
 .produto__descricao {
@@ -110,6 +150,11 @@ nav {
     border-bottom: 2px solid var(--fundo-secundario);
 }
 
+.input__textarea {
+    resize: none;
+    box-sizing: border-box;
+}
+
 .label {
     color: var(--preto-fraco);
     font-weight: 300;
@@ -118,6 +163,21 @@ nav {
     left: 2%;
     pointer-events: none;
     transition: 0.2s ease all;
+}
+
+.label__textarea {
+    top: 10%;
+}
+
+.label__id {
+    color: var(--fundo-secundario);
+    font-size: .8rem;
+    font-weight: 300;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    pointer-events: none;
+    transition: 0;
 }
 
 .input:hover+.label,
@@ -165,7 +225,8 @@ nav {
 
 @media screen and (min-width:768px) {
     .caixa__produto {
-        width: 42.5%;
+        width: 40%;
+        flex-wrap: nowrap;
         padding: 2.5%;
     }
 
