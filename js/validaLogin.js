@@ -6,7 +6,7 @@ async function validaFormulario() {
     const senha = document.querySelector("[data-senha]").value;
 
     if (userAdm.email == email && userAdm.senha == senha) {
-        window.location.href = "/adm.html";
+        window.location.href = "AluraGeek-EstofadosSaoLucas-Challenge/adm.html";
     } else {
         alert("O email ou senha do usuário administrador está incorreto!")
         document.querySelector("[data-formulario-login]").reset();
