@@ -39,6 +39,16 @@
       "precoPrazo": "1150",
       "categoria": "Painel",
       "descricao": "Painel com design em trapézios e integração ambiente, proporciando mais luxuosidade e conforto ao ambiente. Encaixes traseiros fixos e de alta resistência, garantindo a estabilidade com a superfície da parede."
+    },
+    {
+      "id": 5,
+      "nome": "Sofá retrátil reclinável 200cm",
+      "preco": 9500,
+      "imagem": "https://images.tcdn.com.br/img/img_prod/839866/sofa_retratil_e_reclinavel_3_lugares_com_molas_1_80m_livia_suede_cinza_adonai_estofados_1941_1_f28e772f0fc5e360be3e100242aff5f9.jpg",
+      "alt": "Sofá retrátil e reclinável",
+      "precoPrazo": "10000",
+      "categoria": "Sofá retrátil e reclinável",
+      "descricao": "sofá para a família"
     }
   ],
   "userAdm": {

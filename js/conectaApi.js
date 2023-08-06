@@ -1,31 +1,29 @@
-const apiUrl = "https://thiagoleal435.github.io/ThiagoLeal/estofados-sao-lucas.json";
-
 async function todosOsProdutos() {
-    const resposta = await fetch(`${apiUrl}/produtos`);
+    const resposta = await fetch(`http://localhost:3000/produtos`);
     const produtos = await resposta.json();
     return produtos;
 }
 
 async function produtosDaCategoria(categoria) {
-    const resposta = await fetch(`${apiUrl}/produtos?categoria=${categoria}`)
+    const resposta = await fetch(`http://localhost:3000/produtos?categoria=${categoria}`)
     const produtos = await resposta.json();
     return produtos;
 }
 
 async function buscaProdutos(dadoDaPesquisa) {
-    const resposta = await fetch(`${apiUrl}/produtos?q=${dadoDaPesquisa}`)
+    const resposta = await fetch(`http://localhost:3000/produtos?q=${dadoDaPesquisa}`)
     const produtos = await resposta.json();
     return produtos;
 }
 
 async function mostraDetalhesDoProduto(id) {
-    const resposta = await fetch(`${apiUrl}/produtos?id=${id}`);
+    const resposta = await fetch(`http://localhost:3000/produtos?id=${id}`);
     const produto = await resposta.json();
     return produto;
 }
 
 async function adicionaProduto(id, nome, preco, imagem, alt, precoPrazo, categoria, descricao) {
-    const resposta = await fetch(`${apiUrl}/produtos`, {
+    const resposta = await fetch(`http://localhost:3000/produtos`, {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -49,7 +47,7 @@ async function adicionaProduto(id, nome, preco, imagem, alt, precoPrazo, categor
 }
 
 async function deletarProduto(id) {
-    const resposta = await fetch(`${apiUrl}/produtos/${id}`, {
+    const resposta = await fetch(`http://localhost:3000/produtos/${id}`, {
         method: "DELETE",
     });
     if (!resposta.ok) {
@@ -60,7 +58,7 @@ async function deletarProduto(id) {
 }
 
 async function atualizarProduto(id, nome, preco, imagem, alt, precoPrazo, categoria, descricao) {
-    const resposta = await fetch(`${apiUrl}/produtos/${id}`, {
+    const resposta = await fetch(`http://localhost:3000/produtos/${id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -85,7 +83,7 @@ async function atualizarProduto(id, nome, preco, imagem, alt, precoPrazo, catego
 
 
 async function buscaLogin() {
-    const resposta = await fetch(`${apiUrl}/userAdm`);
+    const resposta = await fetch(`http://localhost:3000/userAdm`);
     const usuario = await resposta.json();
     return usuario;
 }
